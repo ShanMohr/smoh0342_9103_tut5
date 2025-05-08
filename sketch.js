@@ -14,7 +14,19 @@ let imgDrwPrps = {
 let canvasAspectRatio = 0;
 
 function preload() {
-  img = loadImage('/assets/Mona_Lisa_by_Leonardo_da_Vinci_500_x_700.jpg');
+  img = loadImage('/assets/Quiz_9_Gotye1.png');
+}
+
+function preload() {
+  img = loadImage('Quiz_9_Gotye2.png');
+}
+
+function preload() {
+  img = loadImage('/assets/Quiz_9_CodeTech.png');
+}
+
+function preload() {
+  img = loadImage('/assets/Quiz_9_InAction_Code.png');
 }
 
 function setup() {

@@ -16,7 +16,7 @@
 
 For this weeks quiz I found it very interesting researching design inspirations, but my mind kept coming back to a music video I have always found intriguing due to its simplicity yet story telling narrative.
 
-My imaging technique inspiration comes from the _Gotye “somebody That I Use to Know” music video_. 
+My imaging technique inspiration comes from the Gotye _“somebody That I Use to Know” music video_. 
 
 The **stop-motion and painting technique** inspires my approach to visual storytelling. 
 
@@ -71,6 +71,6 @@ The result creates an engaging storytelling experience conveyed through animated
 
 ## Conclusion
 
-Exploring the visual storytelling in Gotye’s “Somebody That I Used to Know” and translating its stop-motion paiting interactive SVG animation has inspired new ways to communicate behavial shifts in artwork. 
+Exploring the visual storytelling in Gotye’s _“Somebody That I Used to Know”_ and translating its stop-motion paiting interactive SVG animation has inspired new ways to communicate behavial shifts in artwork. 
 
 By combining SVG line drawing and JavaScript triggered color fills by mouse hovering, I can create a meaningful visual artwork that reflects user interaction into the group project. 

@@ -1,6 +1,5 @@
-# smoh0342_9103_tut5
-
 # Quiz 9 - Design Research: Imaging & Coding Techniques
+# smoh0342_9103_tut5
 
 **Name:** Shannon Mohr 
 **Unit** IDEA9106
@@ -15,7 +14,7 @@
 
 ## Part 1: Imaging Technique Inspiration 
 
-For this weeks quiz I found it very interesting researching design inspirations, but my mind kept coming back to a music video I have always found intriguing but its simplicity yet story telling narrative.
+For this weeks quiz I found it very interesting researching design inspirations, but my mind kept coming back to a music video I have always found intriguing due to its simplicity yet story telling narrative.
 
 My imaging technique inspiration comes from the _Gotye “somebody That I Use to Know” music video_. 
 
@@ -27,7 +26,7 @@ I want to incorporate a similar visual metaphor in my project where the image fa
 
 > Images and links of recources used for Part 1 of week 9 quiz
 
-## Images 
+### Images 
 
 1. ![Gotye Still 1] (Quiz_9_Gotye1.png)
 *Image source: Gotye – Somebody That I Used to Know (Official Music Video)*
@@ -56,7 +55,7 @@ The result creates an engaging storytelling experience conveyed through animated
 
 > Images and links of recources used for Part 2 of week 9 quiz
 
-## Example Screenshot and Links 
+### Example Screenshot and Links 
 
 1. ![Coding Technique in Action] (Quiz_9_InAction_Code.png)
 *Image source: https://css-tricks.com/svg-line-animation-works/*

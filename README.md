@@ -2,10 +2,14 @@
 
 # Quiz 9 - Design Research: Imaging & Coding Techniques
 
-
 **Name:** Shannon Mohr 
 **Unit** IDEA9106
-**Submission:** Quiz 9 - Imaging Technique Inspiration & Coding Technique Exploration 
+**Submission:** Quiz 9 - Imaging Technique Inspiration & Coding Technique Exploration
+
+## Contents
+1. [Part 1: Imaging Technique Inspiration]
+2. [Part 2: Coding Technique Exploration]
+3. [Conclusion] 
 
 > Imaging Techique Inspiration, Part 1 of week 9 quiz
 
@@ -64,38 +68,10 @@ The result creates an engaging storytelling experience conveyed through animated
 [Change Color of SVG on Hover](https://css-tricks.com/change-color-of-svg-on-hover/)
 [Amination Works Image 2](Quiz_9_CodeTech.png)
 
-> Conclusion for week 9 quiz
+> Conclusion for Week 9 Quiz
 
 ## Conclusion
 
 Exploring the visual storytelling in Gotye’s “Somebody That I Used to Know” and translating its stop-motion paiting interactive SVG animation has inspired new ways to communicate behavial shifts in artwork. 
 
 By combining SVG line drawing and JavaScript triggered color fills by mouse hovering, I can create a meaningful visual artwork that reflects user interaction into the group project. 
-
-
-> Notes from previous Tut used 
-
-
-# smoh0342_9103_tut5
-
-## My first repository for IDEA9103
-
-This is my first local change to the repo! 
-
-**Bold Text** 
-_Italic Text_
-
-1. List item 1
-2. List item 2 
-
-[A link to google](https://www.google.com)
-
-![An image of the Mona Lisa](readmeImages/Mona_Lisa_by_Leonardo_da_Vinci_500_x_700.jpg)
-
-```
-function helloWorld() {
-console.log("Hello, world!");
-}
-```
-
-> This is a blockquote.

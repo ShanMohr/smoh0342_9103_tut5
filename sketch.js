@@ -1,3 +1,7 @@
+let isShrunk = false;
+let currentScale = 1;
+let targetScale = 1;
+
 class Bird {
   constructor(scaleFactor = 1, offsetX = 0, offsetY = 0) {
     this.scaleFactor = scaleFactor; // Scale relative to canvas size
@@ -20,6 +24,38 @@ class Bird {
     translate(this.offsetX, this.offsetY);
     scale(this.scaleFactor);
     noStroke(); // Set once for all shapes
+  }
+
+  drawGlow() {
+    push();
+    translate(this.offsetX, this.offsetY);
+    scale(this.scaleFactor);
+  
+    drawingContext.shadowBlur = 25; // Softer glow
+    drawingContext.shadowColor = 'rgba(255, 255, 255, 0.2)'; // Less intense
+  
+    noStroke();
+    fill(255, 255, 255, 30); // Very light white fill for the glow shape
+  
+    // Use the same shape functions for exact matching
+    this.drawHead();
+    this.drawNape();
+    this.drawNeck();
+    this.drawBody();
+    this.drawWing();
+    this.drawTail();
+    this.drawFeather();
+  
+    pop();
+  }
+
+  drawWingFlap() {
+    push();
+    translate(340, 330); // pivot point of wing
+    rotate(radians(sin(frameCount * 0.1) * 5)); // flapping motion
+    translate(-340, -330);
+    this.drawWing();
+    pop();
   }
 
   // Creating a function for the head and beak shape
@@ -105,21 +141,28 @@ class Bird {
 
   // Creating a function for the wing shapes
   drawWing() {
+    push();
+    translate(340, 330); // base of both wings
+    rotate(radians(sin(frameCount * 0.03) * 5)); // slower flap
+    translate(-340, -330);
+  
+    // Wing section 1 (top back wing)
     fill(this.colors.pale);
     beginShape();
     vertex(340, 330);
     vertex(230, 200);
     vertex(433, 220);
     endShape(CLOSE);
-
+  
+    // Wing section 2 (bottom foreground wing)
     fill(this.colors.cream);
     beginShape();
     vertex(230, 200);
     vertex(100, 50);
     vertex(340, 80);
     endShape(CLOSE);
-
-    // Side
+  
+    // Wing section 3 (side feathers)
     fill(this.colors.grey);
     beginShape();
     vertex(340, 80);
@@ -127,7 +170,10 @@ class Bird {
     vertex(433, 220);
     vertex(230, 200);
     endShape(CLOSE);
+  
+    pop();
   }
+  
 
   // Creating a function for the tail shape
   drawTail() {
@@ -241,11 +287,46 @@ function setup() {
 }
 
 function draw() {
-  background(0, 0, 0, 20); // Semi-transparent black for fade effect
-  bg.draw();
-  bird.draw();
-  drawOliveBranch(scaleFactor, offsetX, offsetY);
+  push();
+translate(windowWidth / 2, windowHeight / 2);
+scale(scaleFactor * scalePulse);
+translate(-450, -425); // center bird based on its dimensions
+bird.drawGlow();
+bird.draw();
+drawOliveBranch();
+pop();
 }
+
+function draw() {
+  background(0, 0, 0, 20);
+  elapsedTime = millis() / 1000;
+
+  bg.draw();
+
+  // Breathing scale
+  let scalePulse = 1 + 0.02 * sin(elapsedTime * 2);
+
+  // Smooth transition to target size
+  let lerpSpeed = 0.05;
+  currentScale = lerp(currentScale, targetScale, lerpSpeed);
+
+  // Final combined scale
+  let finalScale = scalePulse * currentScale;
+
+  // Center bird in canvas
+  push();
+  translate(windowWidth / 2, windowHeight / 2);
+  scale(scaleFactor * finalScale);
+  translate(-450, -425); // Offset to center the bird's drawing (based on its dimensions)
+
+  bird.drawGlow();
+  bird.draw();
+  drawOliveBranch();
+
+  pop();
+}
+
+
 
 // To ensure that the canvas is resized and the bird updated when the window size changes
 function windowResized() {
@@ -257,9 +338,7 @@ function windowResized() {
 // Update the bird's scale and position based on canvas size
 function updateTransforms() {
   scaleFactor = min(windowWidth, windowHeight) / 900;
-  offsetX = windowWidth / 2 - (450 * scaleFactor);
-  offsetY = windowHeight / 2 - (425 * scaleFactor);
-  bird = new Bird(scaleFactor, offsetX, offsetY);
+  bird = new Bird(scaleFactor, 0, 0); // offset handled inside draw()
 }
 
 function drawOliveBranch(scaleFactor, offsetX, offsetY) {
@@ -271,8 +350,8 @@ function drawOliveBranch(scaleFactor, offsetX, offsetY) {
   stroke(34, 139, 34); // Olive green
   strokeWeight(8);
   noFill();
-  let centerX = 752;
-  let centerY = 180;
+  let centerX = 710;
+  let centerY = 160;
   bezier(
     centerX, centerY + 80,
     centerX + 30, centerY - 25,
@@ -307,4 +386,11 @@ function drawLeaf(length) {
   bezierVertex(length * 0.25, -length * 0.5, length * 0.50, -length * 0.5, length, 0);
   bezierVertex(length * 0.75, length * 0.5, length * 0., length * 0.5, 0, 0);
   endShape(CLOSE);
+}
+
+function keyPressed() {
+  if (key === ' ') {
+    isShrunk = !isShrunk;
+    targetScale = isShrunk ? 0.2 : 1;
+  }
 }

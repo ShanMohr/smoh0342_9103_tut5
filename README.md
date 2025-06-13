@@ -43,6 +43,10 @@ My focus was crafting a peaceful, story-driven transformation inspired by the sy
 
 This narrative structure sets my animation apart from the rest of the group through its long-form progression and emotive visual rhythm.
 
+### Group Member Variations
+
+Muhammad’s variation differs from mine by focusing on interactive canvas scaling and key-driven motion, where the user directly controls the visual elements through input. In contrast, my animation is time-based, unfolding in a choreographed sequence triggered by events like mouse presses or state changes (e.g. bird flight, season transitions). Shuyao’s approach introduces audio-reactive visuals, where background particles respond dynamically to sound—something my work doesn’t incorporate. While mine emphasizes narrative timing and visual transitions using millis(), theirs prioritize real-time user interaction (Muhammad) and audio-driven generativity (Shuyao), offering more reactive and input-sensitive experiences.
+
 ---
 
 ## Part 3: Technical Exploration

@@ -457,16 +457,13 @@ function setup() {
   rectMode(CENTER);
   angleMode(DEGREES);
 
+  scaleFactor = min(windowWidth, windowHeight) / 900;
+  bird = new Bird(scaleFactor, 0, 0); // initialize here with correct scale
+
   bg = new Background(300);
+  seed = Date.now();
+  bunnyY = height - 140;
 
-  updateTransforms(); // This initializes the bird
-
-  seed = Date.now(); // for random tree structure
-
-  bunnyY = height - 140; // Adjust to match grass/ground height
-
-
-  // Ensure initial values are clean
   dotsAreFading = false;
   dotsFadeProgress = 0;
   showFinalSky = false;
@@ -474,13 +471,12 @@ function setup() {
   showClouds = false;
 
   bunnyX = -100;
-bunnyY = height - 140;
-bunnyHopStartTime = millis();
-bunnyActive = true;
-bunnyPause = false;
-bunnyFinished = false;
-
+  bunnyHopStartTime = millis();
+  bunnyActive = true;
+  bunnyPause = false;
+  bunnyFinished = false;
 }
+
 
 
 
@@ -825,7 +821,7 @@ function initGroundFeatures() {
 
 function drawOliveBranch(offsetX = 0, offsetY = 0) {
   push();
-  translate(710 + offsetX, 160 + offsetY); // Beak anchor point
+  translate(765 + offsetX, 160 + offsetY); // Beak anchor point
   rotate(radians(-20)); // Tilt branch slightly for realism
 
   // Stem

@@ -1,76 +1,113 @@
-# Quiz 9 - Design Research: Imaging & Coding Techniques
+# Seasons of Peace - Individual Reflection and Technical Overview
 # smoh0342_9103_tut5
 
-**Name:** Shannon Mohr 
-**Unit** IDEA9106
-**Submission:** Quiz 9 - Imaging Technique Inspiration & Coding Technique Exploration
+**Name:** Shannon Mohr  
+**Unit:** IDEA9103  
+**Submission:** Major Project — Individual Animation and Technical Commentary
+**Task:** Time-Based:Employ timers and events for animation.
 
 ## Contents
-1. [Part 1: Imaging Technique Inspiration]
-2. [Part 2: Coding Technique Exploration]
-3. [Conclusion] 
+1. [Part 1: Interaction Instructions](#part-1-interaction-instructions)  
+2. [Part 2: Individual Animation Approach](#part-2-individual-animation-approach)  
+3. [Part 3: Technical Exploration](#part-3-technical-exploration)  
+4. [Part 4: Tools, Inspirations & References](#part-4-tools-inspirations--references)  
+5. [Conclusion](#conclusion)
 
-> Imaging Techique Inspiration, Part 1 of week 9 quiz
+> Personal animation contribution and technique breakdown for the Seasons of Peace project.
 
-## Part 1: Imaging Technique Inspiration 
+---
 
-For this weeks quiz I found it very interesting researching design inspirations, but my mind kept coming back to a music video I have always found intriguing due to its simplicity yet story telling narrative.
+## Part 1: Interaction Instructions
 
-My imaging technique inspiration comes from the Gotye _“somebody That I Use to Know” music video_. 
+Click or press to explore the animation sequence:
 
-The **stop-motion and painting technique** inspires my approach to visual storytelling. 
+- **Click anywhere** to start the visual narrative.
+- The **dove descends**, drops an olive branch, and initiates a **seasonal transformation**.
+- Experience the **tree's growth**, **leaves falling**, a **bunny's hop**, and **peaceful fireworks**.
 
-I am drawn to how the artists blend into the geometric backdrop, sort of like the rectangles with the Mona Lisa we coded in class. 
+**Keyboard Controls:**
+- `1` — Show tree
+- `2` — Restart bunny
+- `3` or `4` — Trigger leaf fall
+- `5` — Fade tree into olive branch
 
-I want to incorporate a similar visual metaphor in my project where the image fades into or emerges from the digital canvas.
+---
 
-> Images and links of recources used for Part 1 of week 9 quiz
+## Part 2: Individual Animation Approach
 
-### Images 
+My focus was crafting a peaceful, story-driven transformation inspired by the symbolism of the olive branch and seasonal change.
 
-1. ![Gotye Still 1] (Quiz_9_Gotye1.png)
-*Image source: Gotye – Somebody That I Used to Know (Official Music Video)*
-[![Watch the video](https://img.youtube.com/vi/8UVNT4wvIGY/hqdefault.jpg)](https://www.youtube.com/watch?v=8UVNT4wvIGY)
-![A screenshot of music video 1](Quiz_9_Gotye1.png)
+- Central story arc: **Dove → Olive Branch Drop → Nature Rebirth → Celebration**
+- Sequence driven by **user interaction** and **internal timers**
+- Elements evolve **organically** with symbolic pacing and form
 
+This narrative structure sets my animation apart from the rest of the group through its long-form progression and emotive visual rhythm.
 
-2. ![Gotye Still 2] (Quiz_9_Gotye2.png)
-*Image source: Gotye – Somebody That I Used to Know (Official Music Video)*
-[Watch Gotye – Somebody That I Used to Know (Official Music Video)](https://www.youtube.com/watch?v=8UVNT4wvIGY)
-![A screenshot of music video 2](Quiz_9_Gotye2.png)
+---
 
-> Imaging Techique Inspiration, Part 2 of week 9 quiz
+## Part 3: Technical Exploration
 
-## Part 2: Coding Technique Exploration 
+### Animation Drivers
+- **Time-based** transitions: Trigger seasonal and state changes
+- **Interaction-based** input: Triggers animation stages
 
-To replicate the gradual paint-filling and outline effects seen in Gotye's music video, I’ll explore **SVG line drawing animation using stroke-dashoffset and stroke-dasharray combined with Javascript-triggered hover fill**. 
+### Features Developed
+- **Tree fade** into olive branch using custom timing logic
+- **Looping dove journey** with scale pulses and shadow glow
+- **Leaf generation system** with floating and swirling physics
+- **Sky/ground cycles** mapped through `lerpColor()`
+- **Custom firework bursts** using OOP-based particles
 
-This technique enables the outlines of shapes to gradually appear over time creating the illusion that they are being hand drawn in real time. 
+### Code Highlights
+- Object-Oriented Programming: `Bird`, `Background`, `Cloud`, `Firework`
+- Transformation stacks: `translate()`, `rotate()`, `scale()`
+- Leaf arrays: Controlled position, alpha, float motion
+- State booleans to choreograph narrative steps
 
-When the user interacts, hovering over the shapes, the shapes can then be filled with color simulating the effect of painted surfaces coming to life. 
+### Group Code Modifications
+- Refactored the `draw()` loop for sequential storytelling
+- Developed custom rendering logic for symbolic transitions
+- Structured reusable components with detailed commenting
+- Added new background and made the dove smaller and fly 
+- Tree added and more colors to indecate peace
+- Final Olive branch to show the story would start or end again - leaving it up to the user 
+- Small fireworks at the end 
 
-This layered visual technique mimics the stop-motion painting style used in Gotye’s music video, where the subject becomes visually absorbed into geometric artwork. 
+### Misc.
+I added a lot of code to my individual code. I wanted to create a story, but kept hitting road blocks in my code. You will see it is not full clean and some parts are not needed but still exsist. 
 
-The result creates an engaging storytelling experience conveyed through animated illustration. 
+---
 
-> Images and links of recources used for Part 2 of week 9 quiz
+## Part 4: Tools, Inspirations & References
 
-### Example Screenshot and Links 
+### Visual & Narrative Influences
+- Picasso’s *Dove of Peace*
+- Studio Ghibli’s nature transitions
+- The Coding Train’s procedural art techniques
 
-1. ![Coding Technique in Action] (Quiz_9_InAction_Code.png)
-*Image source: https://css-tricks.com/svg-line-animation-works/*
-[How SVG Line Amination Works](https://css-tricks.com/svg-line-animation-works/)
-[Amination Works Image 1](Quiz_9_InAction_Code.png)
+### Tools & Guides
+- [p5.js Reference](https://p5js.org/reference/)
+- [MDN JavaScript Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Firework Tutorial - The Coding Train](https://www.youtube.com/watch?v=KjF6Eydwxzk)
+- [tree] (https://editor.p5js.org/hnc247/sketches/l2BCH32Jn) 
 
-2. ![Coding Example in Action 2] (Quiz_9_CodeTech.png)
-*Image source: https://css-tricks.com/change-color-of-svg-on-hover/*
-[Change Color of SVG on Hover](https://css-tricks.com/change-color-of-svg-on-hover/)
-[Amination Works Image 2](Quiz_9_CodeTech.png)
+### Techniques Referenced
+- `lerp()` & `lerpColor()` for smooth transitions
+- `noise()` for organic floating motion
+- `push()` and `pop()` for isolated transformation logic
+- `map()` and `constrain()` for controlling visual flow
 
-> Conclusion for Week 9 Quiz
+### AI Use
+- Chat GPT was used for finding errors and formatting
+
+---
 
 ## Conclusion
 
-Exploring the visual storytelling in Gotye’s _“Somebody That I Used to Know”_ and translating its stop-motion paiting interactive SVG animation has inspired new ways to communicate behavial shifts in artwork. 
+Building this animation taught me how to combine **symbolism**, **time-based progression**, and **user interactivity** in meaningful ways.
 
-By combining SVG line drawing and JavaScript triggered color fills by mouse hovering, I can create a meaningful visual artwork that reflects user interaction into the group project. 
+From dropping the olive branch to the fireworks finale, I used code to tell a visual story of **peace, nature, and renewal**. My contribution extended the group vision into a cyclical animated journey.
+
+PS: If you just click the whole animation will just go, but when the leaves fall just press "5" and the animation will then grow the olive branch and stop. 
+
+> Submitted for IDEA9103 — University of Sydney, Semester 1 2025.
